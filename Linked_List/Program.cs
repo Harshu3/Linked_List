@@ -8,9 +8,9 @@ namespace Linked_List
         {
             Console.WriteLine("Welcome to Data Structure program!");
             Custom_LinkedList custom_LinkedList = new Custom_LinkedList();
-            custom_LinkedList.AddLast(56);
-            custom_LinkedList.AddLast(30);
-            custom_LinkedList.AddLast(70);
+            custom_LinkedList.AddFirst(70);
+            custom_LinkedList.AddFirst(30);
+            custom_LinkedList.AddFirst(56);
             custom_LinkedList.Display();
         }
     }
