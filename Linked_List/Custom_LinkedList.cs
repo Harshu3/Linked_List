@@ -10,7 +10,7 @@ namespace Linked_List
     {
         public Node head;
 
-        public void AddFirst(int data)
+        public void AddLast(int data)
         {
             Node newNode = new Node(data);
             if (head == null)
@@ -20,10 +20,15 @@ namespace Linked_List
             }
             else
             {
-                newNode.next = head;
-                head = newNode;
+                Node temp = GetLastNode();
+                temp.next = newNode;
                 Console.WriteLine("{0} node is added into linkedlist", newNode.data);
             }
+        }
+
+        public void Append(int  data)
+        {
+            AddLast(data);
         }
 
         public void Display()
@@ -43,6 +48,16 @@ namespace Linked_List
                 }
                 Console.WriteLine("\n");
             }
+        }
+
+        public Node GetLastNode()
+        {
+            Node temp = head;
+            while (temp.next != null)
+            {
+                temp = temp.next;
+            }
+            return temp;
         }
     }
 }
