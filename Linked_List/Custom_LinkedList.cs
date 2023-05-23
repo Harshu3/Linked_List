@@ -26,24 +26,33 @@ namespace Linked_List
             }
         }
 
-        public void RemoveLast()
+        public void SearchNode(int input)
         {
             if (head == null)
             {
                 Console.WriteLine("Linkedlist is empty");
             }
-            else if (head.next == null)
-            {
-                head = null;
-            }
             else
             {
                 Node temp = head;
-                while (temp.next.next != null)
+                bool isPresent = false;
+                while (temp != null)
                 {
-                    temp = temp.next;
+                    if (temp.data == input)
+                    {
+                        Console.WriteLine("{0} node is present", input);
+                        isPresent = true;
+                        break;
+                    }
+                    else
+                    {
+                        temp = temp.next;
+                    }
                 }
-                temp.next = null;
+                if (!isPresent)
+                {
+                    Console.WriteLine("{0} node is not present", input);
+                }
             }
         }
 
