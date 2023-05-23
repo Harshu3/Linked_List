@@ -65,7 +65,7 @@ namespace Linked_List
             {
                 int delNode = head.data;
                 head = head.next;
-                Console.WriteLine("After removing {0} node", delNode);
+                Console.WriteLine("After removing {0} node from linked list", delNode);
             }
         }
     }
