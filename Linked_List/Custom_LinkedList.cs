@@ -55,38 +55,17 @@ namespace Linked_List
             return temp;
         }
 
-        public void Insert(int position, int data)
+        public void RemoveFirst()
         {
-            Node newNode = new Node(data);
-            if (position < 1)
+            if (head == null)
             {
-                Console.WriteLine("Invalid position");
-            }
-            else if (position == 1)
-            {
-                newNode.next = head;
-                head = newNode;
+                Console.WriteLine("Linkedlist is empty can't perform remove");
             }
             else
             {
-                Node temp = new Node(data);
-                temp = head;
-                for (int i = 1; i < position - 1; i++)
-                {
-                    if (temp != null)
-                    {
-                        temp = temp.next;
-                    }
-                }
-                if (temp != null)
-                {
-                    newNode.next = temp.next;
-                    temp.next = newNode;
-                }
-                else
-                {
-                    Console.WriteLine("Previous node is null");
-                }
+                int delNode = head.data;
+                head = head.next;
+                Console.WriteLine("After removing {0} node from linked list", delNode);
             }
         }
     }
