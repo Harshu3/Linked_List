@@ -26,11 +26,6 @@ namespace Linked_List
             }
         }
 
-        public void Append(int  data)
-        {
-            AddLast(data);
-        }
-
         public void Display()
         {
             if (head == null)
@@ -58,6 +53,41 @@ namespace Linked_List
                 temp = temp.next;
             }
             return temp;
+        }
+
+        public void Insert(int position, int data)
+        {
+            Node newNode = new Node(data);
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid position");
+            }
+            else if (position == 1)
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+            else
+            {
+                Node temp = new Node(data);
+                temp = head;
+                for (int i = 1; i < position-1; i++)
+                {
+                    if (temp !=  null)
+                    {
+                        temp = temp.next;
+                    }
+                }
+                if (temp != null)
+                {
+                    newNode.next = temp.next;
+                    temp.next = newNode;
+                }
+                else
+                {
+                    Console.WriteLine("Previous node is null");
+                }
+            }
         }
     }
 }

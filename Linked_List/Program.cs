@@ -9,9 +9,11 @@ namespace Linked_List
             Console.WriteLine("Welcome to Data Structure program!");
             Console.WriteLine("Appending LinkedList!");
             Custom_LinkedList custom_LinkedList = new Custom_LinkedList();
-            custom_LinkedList.Append(56);
-            custom_LinkedList.Append(30);
-            custom_LinkedList.Append(70);
+            custom_LinkedList.AddLast(56);
+            custom_LinkedList.AddLast(70);
+            custom_LinkedList.Display();
+            custom_LinkedList.Insert(2, 30);
+            Console.WriteLine("After 30 node is added into linked list");
             custom_LinkedList.Display();
         }
     }
