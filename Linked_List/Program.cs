@@ -7,7 +7,7 @@ namespace Linked_List
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure program!");
-            Console.WriteLine("Remove first node from LinkedList!");
+            Console.WriteLine("Removing first node from LinkedList!");
             Custom_LinkedList custom_LinkedList = new Custom_LinkedList();
             custom_LinkedList.AddLast(56);
             custom_LinkedList.AddLast(30);
