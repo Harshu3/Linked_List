@@ -54,19 +54,5 @@ namespace Linked_List
             }
             return temp;
         }
-        
-        public void RemoveFirst()
-        {
-            if (head == null)
-            {
-                Console.WriteLine("Linkedlist is empty can't perform remove");
-            }
-            else
-            {
-                int delNode = head.data;
-                head = head.next;
-                Console.WriteLine("After removing {0} node", delNode);
-            }
-        }
     }
 }
