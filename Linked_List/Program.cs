@@ -7,6 +7,7 @@ namespace Linked_List
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure program!");
+            Console.WriteLine("Adding nodes in sequence as given");
             Custom_LinkedList custom_LinkedList = new Custom_LinkedList();
             custom_LinkedList.AddFirst(70);
             custom_LinkedList.AddFirst(30);
