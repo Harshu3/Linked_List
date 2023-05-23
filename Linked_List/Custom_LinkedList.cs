@@ -26,6 +26,27 @@ namespace Linked_List
             }
         }
 
+        public void RemoveLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linkedlist is empty");
+            }
+            else if (head.next == null)
+            {
+                head = null;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
+            }
+        }
+
         public void Display()
         {
             if (head == null)
@@ -53,20 +74,6 @@ namespace Linked_List
                 temp = temp.next;
             }
             return temp;
-        }
-
-        public void RemoveFirst()
-        {
-            if (head == null)
-            {
-                Console.WriteLine("Linkedlist is empty can't perform remove");
-            }
-            else
-            {
-                int delNode = head.data;
-                head = head.next;
-                Console.WriteLine("After removing {0} node from linked list", delNode);
-            }
         }
     }
 }
